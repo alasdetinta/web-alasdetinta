@@ -1,0 +1,203 @@
+/*<RESET>*/
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, 
+pre, ul, ol, li, dl, dt, dd, form, a, fieldset, input, th, td
+{ margin: 0; padding: 0; border: 0; outline: none; }
+
+h1, h2, h3, h4, h5, h6{ font-size: 100%; }
+
+ul, ol{ list-style: none; }
+
+img{ border: 0; }
+/*</RESET>*/
+
+.outline-section-title{
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+html,
+body {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+
+.table      { display: table; 
+    width: 100%;}
+.tr         { display: table-row }
+.thead      { display: table-header-group }
+.tbody      { display: table-row-group }
+.tfoot      { display: table-footer-group }
+.col        { display: table-column }
+.colgroup   { display: table-column-group }
+.td, .th    { display: table-cell }
+.caption    { display: table-caption }
+
+.vcenter    { vertical-align: middle }
+.hcenter    { text-align: center }
+
+/*HEADER*/
+.page-header{
+    position: relative;
+    z-index: 10;
+}
+
+/*<NAVBAR>*/
+.navbar{     
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+
+    height: 57px;
+    box-sizing: border-box;
+
+    background-color: #3d3d3d;
+    border-bottom: 3px solid #aaaaaa;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: initial;
+}
+
+.navbar-links{
+    margin: auto;
+    height: inherit;
+    display: table;
+    font-size: 0; /*elimina los espacios creados por inline-block*/
+}
+
+.navbar-links a{
+    height: inherit;    
+    display: table-cell; 
+    vertical-align: middle;
+
+    font-size: 1rem; /*resetea el tamaño de la fuente*/
+    text-decoration: none;
+    color: #bbbbbb;
+    padding: 0px 26px 0px 26px;
+}
+
+.navbar-links a:hover{ color: white; }
+
+
+.navbar-active-link{
+    box-sizing: border-box;
+    color: white !important;
+    border-bottom: 3px solid #D81F57 !important;
+}
+
+/*<DROPDOWN>*/
+.navbar-left-content{
+    position: absolute;
+}
+
+.alasdetinta-logo{
+    visibility: hidden;
+    height: 50px;
+    width:100px;
+    display: inline-block;
+    background: url("../images/alasdetinta-favicon.png") no-repeat 15px 6px;
+    background-size: 36px auto;
+}
+
+.navbar-dropmenu-icon{
+    color: white;
+    font-size: 32px;
+    top: 10px;
+    left: 62px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    transition: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #3d3d3d;
+    min-width: 200px;
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+.dropdown-content a {
+    color: #bbbbbb;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:focus{color: white;}
+
+.show {display: block;}
+/*</DROPDOWN>*/
+/*</NAVBAR>*/
+
+/*<CONTENT>*/
+.page-main{
+    position: relative;
+    max-width: 100%;
+    margin: 50px 0px 50px 0px;
+    padding: 0px 0px 0px 0px;
+    z-index: 0;
+}
+/*</CONTENT>*/
+
+/*<FOOTER>*/
+.page-footer{    
+    position: relative;
+    z-index: 0;
+    height: 1px;
+    text-align: center;
+    width: 100%;
+
+    background-color: #3d3d3d;
+    background-clip: content-box;
+    box-shadow: 0px -6px 16px 0px rgba(0,0,0,0.2);
+}
+
+.page-footer-division{ padding: 15px 5px 5px 5px; position: relative; 
+    display: table; margin: auto; }
+
+.page-footer-division img{ max-height:150px; width: auto;}
+
+.page-footer-division p, .page-footer-division a{
+    display: table-cell; 
+    vertical-align: middle;
+    color: #cccccc;
+    padding: 0px 12px 0px 12px;
+}
+
+.page-footer-division a{ color: #aaaaaa !important; }
+/*</FOOTER>*/
+
+.box{
+    height: 200px; width: 200px;
+    background-color: #D81F57;
+}
+
+
+
+@media (max-width: 700px){
+    .page-header{
+        height: 50px;        
+    }
+    .navbar-links{
+        display: none;       
+    }
+    .alasdetinta-logo{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 480px){
+    .page-footer-division{
+        display: inline-block;
+    }
+}

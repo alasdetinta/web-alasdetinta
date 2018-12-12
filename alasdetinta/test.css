@@ -1,0 +1,26 @@
+
+body {
+    background: #FFFAD5;
+    color: #BD4932;
+    display: table;
+    width: 100%;
+  }
+  .main {
+    height: 100%;
+  }
+  .footer {
+    display: table-row;
+    height: 1px;
+    background: #105B63;
+    color: #FFFAD5;
+  }
+
+/* Basic Style*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
